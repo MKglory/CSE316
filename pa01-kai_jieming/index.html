@@ -1,0 +1,90 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+  <title>Fake Stack Overflow</title>
+</head>
+<body>
+  <div id="header" class="header">
+    <h1>Fake Stack Overflow</h1>
+    <input placeholder="Search..." id="search_bar">
+  </div>
+
+  <div id="main" class="main">
+
+    <div id="nav" class="nav">
+      <button type="button" id="questions_button">Questions</button>
+      <button type='button' id="tags_button">Tags</button>
+    </div>
+
+    <!-- This part is main question page -->
+    <div id="frame" class="frame">
+      <div id="sub_header" class="sub_header">
+        <h3 id="sub_header_content">All Questions</h3>
+        <div id="askQuestion_div" class="askQuestion_div"><button id="askQuestion" class="askQuestion"> Ask Question</button></div>
+      </div>
+      <div id="sub_header2" class="sub_header2">
+        <p id="num_question_frame"></p>
+        <div id="sort_bottons", class="sort_buttons">
+          <!-- <button type="button" id="Newest_sort">Newest</button>
+          <button type="button" id="Active_sort">Active</button>
+          <button type="button" id="Unanswered">Unanswered</button> -->
+        </div>
+      </div>
+      <div id="pose_questions" class="pose_questions"></div>
+    </div>
+
+    <!-- This part is pose question page -->
+    <div id="ask_question_frame" class="ask_question_frame" style="display: none">
+      <h2 style="padding-left: 20%;">Question Title*</h2>
+      <p style="font-style: italic; padding-left: 10px; padding-left: 20%; margin-left: 15px;">Limit title to 100 characters or less</p>
+      <input class="ask_question_input" id="ask_question_input1" maxlength="100 required">
+      <span class="error" id="titleError" style="display: none;">Title must not exceed 100 characters and cannot be empty</span>
+
+      <h2 style="padding-left: 20%;">Question Text*</h2>
+      <p style="font-style: italic; padding-left: 10px; padding-left: 20%; margin-left: 15px;">Add details</p>
+      <textarea class="ask_question_input" id="ask_question_input2" required></textarea>
+      <span class="error" id="textError" style="display: none;">Question text cannot be empty</span>
+
+      <h2 style="padding-left: 20%; margin-bottom: 5px;">Tags*</h2>
+      <p style="font-style: italic; padding-left: 10px; padding-left: 20%; margin-left: 15px; margin-top: 0px;">Add keywords separated by whitespace</p>
+      <input class="ask_question_input" id="ask_question_input3"required>
+      <span class="error" id="tagsError" style="display: none;">Enter up and to 5 tags separated by whitespace</span>
+
+      <h2 style="padding-left: 20%;">Username*</h2>
+      <input class="ask_question_input" id="ask_question_input4"required>
+      <span class="error" id="usernameError" style="display: none;">Username cannot be empty</span>
+
+      <button type="button" id="post_question_button" style="margin-left: 20%;">Post Question</button>
+      <p style="display: inline-block; margin-left: 20%; color: crimson;">*indicates mandatory fileds</p>
+    </div>
+
+
+    <!-- This part is tags page -->
+    <div id="tags_frame" class="tags_frame" style="display:none;">
+    </div>
+
+    <!-- This part is question answers page -->
+    <div id="question_answers_page" class="question_answers_page" style="display:none;">
+    </div>
+
+    <!-- This part adding answer page -->
+    <div id="answer_page" class="answer_page" style="display:none;">
+      <div>
+        <h2>Username*</h2>
+        <input id="answer_username" class="answer_username" requied>
+        <p id="answer_username_error" class="answer_username_error" style="display:none">Username cannot be empty</p>
+        <br>
+        <h2 style="margin-top: 50px;">Answer Text*</h2>
+        <textarea id="answer_text" class="answer_page_input" required></textarea>
+        <p id="answer_text_error" class="answer_text_error" style="display:none">Answer text cannot be empty</p>
+        <br>
+        <div id="answer_page_postBtn_div" style="padding-left: 0;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
